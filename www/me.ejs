@@ -1,0 +1,41 @@
+<%- include('./header.ejs', { title: "Compte" }) %>
+<main>
+    <h2> Compte  > Mes Informations</h2>
+    <div class="row">
+        <div class="column column-30">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td><%= connectedUser.name %></td>
+                </tr>
+                <tr>
+                    <th>Age</th>
+                    <td><%= connectedUser.age %></td>
+                </tr>
+
+                <tr>
+                    <th>Gender</th>
+                    <td><%= connectedUser.gender %></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><%= connectedUser.email %></td>
+                </tr>
+                <tr>
+                    <th>Phone</th>
+                    <td><%= connectedUser.phone %></td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td><%= connectedUser.address %></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <form action="/deconnexion">
+        <button class="button button-outline" type="submit">Deconnexion</button>
+    </form>
+
+</main>
+</body>
+</html>

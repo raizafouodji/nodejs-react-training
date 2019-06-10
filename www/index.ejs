@@ -1,0 +1,40 @@
+<%- include('./header.ejs', { title: "Accueil" }) %>
+<main>
+    <h2>Accueil > Liste des utilisateurs</h2>
+    <!--
+       You need to send data from '../routes/front.router' and make a loop
+       to create a liste of data
+       - https://gist.github.com/DWS-paris/2fbb6ebdbacec0f529a93394ac226df1
+    -->
+    <div class="row">
+        <div class="column column-70">
+            <table>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <% for(let item of userCollection){ %>
+                        <tr>
+                            <td><%= item.name %></td>
+                            <td><%= item.age %></td>
+                            <td><%= item.gender %></td>
+                            <td><%= item.email %></td>
+                            <td><%= item.phone %></td>
+                            <td><%= item.address %></td>
+                        </tr>
+
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+</body>
+</html>
